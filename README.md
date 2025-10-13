@@ -122,12 +122,13 @@ encounters <-
 
 enc <- 
     encounters |> 
-    head() |>
+    #head() |>
     compute(name = I(glue("{db_name}.ccdm.encounters_sample")), 
             temporary = FALSE, 
             overwrite = TRUE)
 
 enc |> 
+    head() |>
     collect() |> 
     knitr::kable()
 ```
