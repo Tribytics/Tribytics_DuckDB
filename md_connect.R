@@ -7,7 +7,7 @@ md_connect <- function(config_env = 'default') {
     conn <- DBI::dbConnect(duckdb::duckdb(), ":memory:")
     
     # Authenticate with MotherDuck Token 
-    DBI::dbExecute(conn, "INSTALL 'motherduck'")
+    #DBI::dbExecute(conn, "INSTALL 'motherduck'")
     DBI::dbExecute(conn, "LOAD 'motherduck'")
     
     if (config$md_token != "") { 
