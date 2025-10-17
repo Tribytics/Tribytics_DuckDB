@@ -9,13 +9,12 @@
 
 # from global.R 
 
-pacman::p_load(
-    shiny,
-    duckdb,
-    DBI,
-    dplyr,
-    glue
-)
+    library(shiny)
+    library(duckdb)
+    library(DBI)
+    library(dplyr)
+    library(glue)
+
 
 #source(here::here("R/functions.R"))
 source("md_connect.R")
